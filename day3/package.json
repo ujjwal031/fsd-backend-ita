@@ -1,0 +1,17 @@
+{
+  "name": "day3",
+  "version": "1.0.0",
+  "main": "app2.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app2.js"
+  },
+  "keywords": [],
+  "author": "Vikas Gupta",
+  "license": "ISC",
+  "description": "Backend for Express server",
+  "dependencies": {
+    "day3": "file:",
+    "express": "^4.21.2"
+  }
+}
