@@ -19,7 +19,7 @@ const Register = () => {
             const user = { name, age };
 
             // Send the POST request with the user object
-            await axios.post('https://fsd-backend-ita.onrender.com/users', user);
+            await axios.post('http://localhost:9000/users', user);
             
             // Show notification
             setNotification('User registered successfully!');
@@ -46,14 +46,27 @@ const Register = () => {
           <h2>User Register</h2>
 
             <form onSubmit={handleregister}>
-                <label>
-                    Name : 
-                    <input type='text' name='name' required placeholder="Enter your name" />
-                </label>
-                <label>
-                    Age : 
-                    <input type='number' name='age' required placeholder="Enter your age" />
-                </label>
+                <div className="form-field">
+                    <label htmlFor="name">Name:</label>
+                    <input 
+                        type='text' 
+                        id="name"
+                        name='name' 
+                        required 
+                        placeholder="Enter your name" 
+                    />
+                </div>
+                
+                <div className="form-field">
+                    <label htmlFor="age">Age:</label>
+                    <input 
+                        type='number' 
+                        id="age"
+                        name='age' 
+                        required 
+                        placeholder="Enter your age" 
+                    />
+                </div>
 
                 <button 
                     type='submit' 

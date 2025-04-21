@@ -15,7 +15,7 @@ const Update = () => {
             const age = e.target.age.value;
             const user = { name, age };
             
-            await axios.put(`https://fsd-backend-ita.onrender.com/users${id}`, user);
+            await axios.put(`http://localhost:9000/users/${id}`, user);
             
             setNotification('User updated successfully!');
             
@@ -38,32 +38,38 @@ const Update = () => {
         <div className="item-animation">
             <h2>Update User</h2>
             <form onSubmit={handleupdate}>
-                <label htmlFor="id">User ID:</label>
-                <input 
-                    type="text" 
-                    id="id" 
-                    name="id" 
-                    required 
-                    placeholder="Enter user ID"
-                />
+                <div className="form-field">
+                    <label htmlFor="id">User ID:</label>
+                    <input 
+                        type="text" 
+                        id="id" 
+                        name="id" 
+                        required 
+                        placeholder="Enter user ID"
+                    />
+                </div>
 
-                <label htmlFor="name">Name:</label>
-                <input 
-                    type="text" 
-                    id="name" 
-                    name="name" 
-                    required 
-                    placeholder="Enter new name"
-                />
+                <div className="form-field">
+                    <label htmlFor="name">Name:</label>
+                    <input 
+                        type="text" 
+                        id="name" 
+                        name="name" 
+                        required 
+                        placeholder="Enter new name"
+                    />
+                </div>
 
-                <label htmlFor="age">Age:</label>
-                <input 
-                    type="number" 
-                    id="age" 
-                    name="age" 
-                    required 
-                    placeholder="Enter new age"
-                />
+                <div className="form-field">
+                    <label htmlFor="age">Age:</label>
+                    <input 
+                        type="number" 
+                        id="age" 
+                        name="age" 
+                        required 
+                        placeholder="Enter new age"
+                    />
+                </div>
 
                 <button 
                     type="submit" 

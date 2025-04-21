@@ -56,13 +56,20 @@ input[type="number"] {
     border: 1px solid #444;
     border-radius: var(--border-radius);
     margin-bottom: 15px;
+    margin-top: 8px;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    display: block;
 }
 
 input:focus {
     outline: none;
     border-color: var(--accent-color);
     box-shadow: 0 0 0 2px rgba(138, 43, 226, 0.2);
+}
+
+/* Form field spacing */
+.form-field {
+    margin-bottom: 20px;
 }
 
 /* Submit button */

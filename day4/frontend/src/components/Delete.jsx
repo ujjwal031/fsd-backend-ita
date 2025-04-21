@@ -11,7 +11,7 @@ const Delete = () => {
         
         try {
             const id = e.target.id.value;
-            await axios.delete(`https://fsd-backend-ita.onrender.com/users/${id}`);
+            await axios.delete(`http://localhost:9000/users/${id}`);
             
             // Show notification
             setNotification('User deleted successfully!');
@@ -37,15 +37,16 @@ const Delete = () => {
         <div className="item-animation">
             <h2>Delete User</h2>
             <form onSubmit={handleDelete}>
-                <label>
-                    User ID:
+                <div className="form-field">
+                    <label htmlFor="user-id">User ID:</label>
                     <input 
                         type="text" 
+                        id="user-id"
                         name="id" 
                         required 
                         placeholder="Enter user ID to delete"
                     />
-                </label>
+                </div>
                 
                 <button 
                     type="submit" 
