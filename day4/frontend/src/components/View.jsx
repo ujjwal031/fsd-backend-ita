@@ -8,7 +8,7 @@ const View = () => {
     const handleviews = async () => {
         setLoading(true);
         try {
-            const res = await axios.get('http://localhost:9000/users');
+            const res = await axios.get('https://fsd-backend-ita.onrender.com/users');
             setUsers(res.data);
         } catch (error) {
             console.error("Failed to fetch users:", error);
